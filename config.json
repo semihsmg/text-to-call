@@ -1,0 +1,20 @@
+{
+  "template": {
+    "message": "Sayın {name}, {hospital} hastanesinden arıyoruz. {report_type} sonuçlarınız çıkmıştır, doktorunuzla görüşebilirsiniz. İyi ve sağlıklı günler dileriz...",
+    "prompt": "Read in a warm, calm tone. This is an hospital information giving service."
+  },
+  "tts": {
+    "model": "gemini-2.5-flash-tts",
+    "voice": "Aoede",
+    "language_code": "tr-TR",
+    "speaking_rate": 1.0,
+    "pitch": 0
+  },
+  "call": {
+    "poll_interval": 30,
+    "poll_timeout": 120,
+    "ring_time": 25,
+    "filter": 0,
+    "time_window": 60
+  }
+}
