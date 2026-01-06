@@ -4,7 +4,7 @@
     "prompt": "Read in a warm, calm tone. This is an hospital information giving service."
   },
   "tts": {
-    "model": "gemini-2.5-flash-tts",
+    "model": "gemini-2.5-pro-tts",
     "voice": "Aoede",
     "language_code": "tr-TR",
     "speaking_rate": 1.0,
