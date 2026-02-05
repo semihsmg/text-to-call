@@ -35,7 +35,7 @@ CLI (main.py)
     │
     ▼
 ┌─────────────────────┐
-│  Template Engine    │  Replace {name}, {hospital}, {report_type}, etc.
+│  Template Engine    │  Replace {name}, {hospital}, etc.
 └─────────────────────┘
     │
     ▼
@@ -143,8 +143,8 @@ CLI (main.py)
 **Decision:** Error on missing required placeholders AND unknown placeholders.
 **Rationale:** Fail fast, prevent malformed messages from being sent.
 
-**Required placeholders:** `{name}`, `{hospital}`, `{report_type}`
-**Optional placeholders:** `{date}`, `{doctor}`
+**Required placeholders:** `{name}`, `{hospital}`
+**Optional placeholders:** `{report_type}`, `{date}`, `{doctor}`
 
 ### Call Status: Poll Until Completion
 
@@ -219,7 +219,7 @@ text-to-call/
 | --- | --- | --- |
 | `--name` | Yes | Patient's full name |
 | `--phone` | Yes | Phone number (auto-formatted) |
-| `--report-type` | Yes | Type of medical report |
+| `--report-type` | No | Type of medical report |
 | `--hospital` | Yes | Hospital name |
 | `--doctor` | No | Doctor's name |
 | `--date` | No | Report ready date |

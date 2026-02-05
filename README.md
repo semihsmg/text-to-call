@@ -138,7 +138,6 @@ Edit `config.json` to customize the message template, voice prompt, and call set
 python main.py \
   --name "Ahmet Yılmaz" \
   --phone "+905551234567" \
-  --report-type "MR" \
   --hospital "Özel Sağlık Hastanesi"
 ```
 
@@ -148,8 +147,8 @@ python main.py \
 python main.py \
   --name "Ayşe Demir" \
   --phone "+905559876543" \
-  --report-type "Kan Tahlili" \
   --hospital "Merkez Hastanesi" \
+  --report-type "Kan Tahlili" \
   --doctor "Dr. Mehmet Öz" \
   --date "26 Aralık 2024"
 ```
@@ -162,7 +161,6 @@ Override the voice prompt or voice name from config:
 python main.py \
   --name "Mehmet Kaya" \
   --phone "+905551112233" \
-  --report-type "Tomografi" \
   --hospital "Şifa Hastanesi" \
   --voice "Puck" \
   --prompt "Read in a cheerful and energetic tone"
@@ -176,7 +174,6 @@ Generate audio without making a call:
 python main.py \
   --name "Test User" \
   --phone "+905551234567" \
-  --report-type "MR" \
   --hospital "Test Hastanesi" \
   --dry-run
 ```
@@ -196,7 +193,7 @@ The following Turkish phone formats are accepted and auto-converted:
 | --- | --- | --- |
 | `--name` | Yes | Patient's full name |
 | `--phone` | Yes | Phone number (auto-formatted) |
-| `--report-type` | Yes | Type of medical report |
+| `--report-type` | No | Type of medical report |
 | `--hospital` | Yes | Hospital name |
 | `--doctor` | No | Doctor's name |
 | `--date` | No | Report ready date |
@@ -210,7 +207,7 @@ The following Turkish phone formats are accepted and auto-converted:
 | --- | --- | --- |
 | `{name}` | Yes | Ahmet Yılmaz |
 | `{hospital}` | Yes | Özel Sağlık Hastanesi |
-| `{report_type}` | Yes | MR, Tomografi, Kan Tahlili |
+| `{report_type}` | No | MR, Tomografi, Kan Tahlili |
 | `{date}` | No | 26 Aralık 2024 |
 | `{doctor}` | No | Dr. Mehmet Öz |
 
