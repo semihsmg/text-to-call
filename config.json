@@ -1,6 +1,6 @@
 {
   "template": {
-    "message": "Sayın {name}, {hospital} hastanesinden arıyoruz. {report_type} sonuçlarınız çıkmıştır, doktorunuzla görüşebilirsiniz. İyi ve sağlıklı günler dileriz...",
+    "message": "Sayın {name}, {hospital} hastanesinden arıyoruz. Sonuçlarınız çıkmıştır, doktorunuz {doctor} görüşebilirsiniz. İyi ve sağlıklı günler dileriz...",
     "prompt": "Read in a warm, calm tone. This is an hospital information giving service."
   },
   "tts": {

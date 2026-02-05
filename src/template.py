@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 
-REQUIRED_PLACEHOLDERS = {'name', 'hospital', 'report_type'}
+REQUIRED_PLACEHOLDERS = {'name', 'hospital'}
 ALLOWED_PLACEHOLDERS = {'name', 'hospital', 'report_type', 'date', 'doctor'}
 
 PLACEHOLDER_PATTERN = re.compile(r'\{(\w+)\}')

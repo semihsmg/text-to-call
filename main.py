@@ -133,13 +133,13 @@ def create_parser() -> argparse.ArgumentParser:
         epilog="""
 Examples:
   python main.py --name "Ahmet Yılmaz" --phone "+905551234567" \\
-    --report-type "MR" --hospital "Özel Sağlık Hastanesi"
+    --hospital "Özel Sağlık Hastanesi"
 
   python main.py --name "Test User" --phone "05551234567" \\
-    --report-type "Kan Tahlili" --hospital "Test Hastanesi" --dry-run
+    --hospital "Test Hastanesi" --dry-run
 
   python main.py --name "Ayşe Demir" --phone "+905559876543" \\
-    --report-type "Tomografi" --hospital "Merkez Hastanesi" \\
+    --hospital "Merkez Hastanesi" --report-type "Tomografi" \\
     --voice "Puck" --prompt "Read in a cheerful tone"
         """,
     )
@@ -156,9 +156,8 @@ Examples:
     )
     parser.add_argument(
         "--report-type",
-        required=True,
         dest="report_type",
-        help="Type of medical report (e.g., MR, Tomografi, Kan Tahlili)",
+        help="Type of medical report (e.g., MR, Tomografi, Kan Tahlili) (optional)",
     )
     parser.add_argument(
         "--hospital",
@@ -233,8 +232,9 @@ def main() -> int:
     values = {
         'name': args.name,
         'hospital': args.hospital,
-        'report_type': args.report_type,
     }
+    if args.report_type:
+        values['report_type'] = args.report_type
     if args.doctor:
         values['doctor'] = args.doctor
     if args.date:
